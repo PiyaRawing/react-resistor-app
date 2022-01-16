@@ -1,0 +1,58 @@
+.resistorBrand2 {
+    width: 300px;
+    height: 85px;
+    margin-top: 10px;
+    background-image: url(../imgs/resistorB5.svg);
+  }
+  
+  .Resisbrand-2 {
+    width: 300px;
+    height: 16.09px;
+  }
+  
+  #rerow {
+    width: 300px;
+    height: 52.8px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #brand-5-1 {
+    width: 99.09px;
+    height: 52.8px;
+  }
+  
+  #brand-5-2 {
+    width: 8px;
+    height: 52.8px;
+  }
+
+  #brand-5-3 {
+    width: 9px;
+    height: 52.8px;
+  }
+
+  #brand-5-4 {
+    width: 9px;
+    height: 52.8px;
+  }
+
+  #brand-5-5 {
+    width: 34.11px;
+    height: 52.8px;
+  }
+
+  #brand-5-6 {
+    width: 10px;
+    height: 52.8px;
+  }
+
+  #brand-5-7 {
+    width: 49px;
+    height: 52.8px;
+  }
+  
+  .Resisbrand-3 {
+    width: 300px;
+    height: 16.09px;
+  }

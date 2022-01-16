@@ -10,6 +10,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 30vh;
+  margin: 0;
 }
 
 .appName {
@@ -17,49 +19,35 @@ body {
   text-align: center;
 }
 
-.horizontal-colorBar {
-  width: 480px;
+.horizontal-Brands {
+  width: 340px;
   height: auto;
-  margin: 20px 48px;
-  padding: 20px;
-  overflow: hidden;
+  padding: 20px 15px;
+  margin-top: 20px;
   text-align: center;
   border-radius: 15px;
   background-color: white;
   box-shadow: 5px 5px #888888;
 }
 
-.horizontal-colorBar li {
+.horizontal-Brands li {
   display: inline-block;
 }
 
-.horizontal-colorBar a {
+.horizontal-Brands a {
   color: black;
   text-decoration: none;
   padding: 0px 24px;
   display: block;
 }
 
-.result-style {
-  width: 480px;
-  height: auto;
-  margin: 20px 48px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 5px 5px #888888;
-}
-
-.result-style div {
-  padding: 20px;
-}
-
 .app-Ver {
-  width: 480px;
+  width: 340px;
   height: auto;
-  margin: 20px 48px;
   padding: 20px;
-  overflow: hidden;
+  margin-top: 20px;
   text-align: center;
+
   border-radius: 15px;
   background-color: white;
   box-shadow: 5px 5px #888888;

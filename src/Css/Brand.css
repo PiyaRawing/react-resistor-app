@@ -1,7 +1,6 @@
 .input-va {
-  width: 480px;
+  width: 340px;
   height: auto;
-  margin: 20px 48px;
   padding: 20px;
   border-radius: 15px;
   background-color: white;
@@ -22,3 +21,4 @@
   display: table;
   clear: both;
 }
+

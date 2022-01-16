@@ -1,21 +1,46 @@
 import React, { useState } from 'react';
 import '../Css/Brand.css';
-import '../Css/Option.css'
+import '../Css/ResisBrand4.css'
+
 
 const FoBrand = () => {
 
-    const [selecB1, setSelecB1] = useState('');
-    const [selecB2, setSelecB2] = useState('');
-    const [selecB3, setSelecB3] = useState('');
+    const [selecB1, setSelecB1] = useState('0');
+    const [selecB2, setSelecB2] = useState('0');
+    const [selecB3, setSelecB3] = useState('0');
     const [selecB4, setSelecB4] = useState('');
 
     const Result = (props) => {
-        
-        const tolerance = ['', '±20%', '±10%', '±5%', '±1%', '±2%', '±0.5%', '±0.25%', '±0.1%', '±0.05%']
-        const A = (props.B1 + props.B2) * (10 ** props.B3);
+
+        const mutip = ['0', '1', '2', '3', '4', '5', '6', '-1', '-2']
+        const tolerance = ['± 1%', '± 2%', '± 0.5%', '± 0.25%', '± 0.1%', '± 0.05%', '± 5%', '± 10%']
+        const A = (props.B1 + props.B2) * (10 ** mutip[props.B3]);
         const B = tolerance[props.B4];
         return (
             <h1>{A}&nbsp;Ω&nbsp;{B}</h1>
+        );
+    }
+
+    const ResistorPic = (props) => {
+        const BColors = ["Black", 'Brown', 'Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Grey', 'White']
+        const MColors = ["Black", 'Brown', 'Red', 'Orange', 'Yellow', 'Green', 'Blue', 'DarkGoldenrod', 'Silver']
+        const TColors = ["Brown", 'Red', 'Green', 'Blue', 'Violet', 'Grey', 'DarkGoldenrod', 'Silver']
+        return (
+            <div className='resistorBrand1'>
+                <div className='Resisbrand-1'></div>
+                <div id='rerow'>
+                    <div id='brand-4-1'></div>
+                    <div style={{ backgroundColor: BColors[props.B1] }} id='brand-4-2'></div>
+                    <div id='brand-4-3'></div>
+                    <div style={{ backgroundColor: BColors[props.B2] }} id='brand-4-2'></div>
+                    <div id='brand-4-4'></div>
+                    <div style={{ backgroundColor: MColors[props.B3] }} id='brand-4-2'></div>
+                    <div id='brand-4-5'></div>
+                    <div style={{ backgroundColor: TColors[props.B4] }} id='brand-4-2'></div>
+                    <div id='brand-4-6'></div>
+                </div>
+                <div className='Resisbrand-3'></div>
+            </div>
         );
     }
 
@@ -23,7 +48,7 @@ const FoBrand = () => {
         <React.Fragment>
             <div className='input-va'>
                 4 Brand
-                <div></div>
+                <ResistorPic B1={selecB1} B2={selecB2} B3={selecB3} B4={selecB4} />
                 <Result B1={selecB1} B2={selecB2} B3={selecB3} B4={selecB4} />
                 <div class="row">
                     <div class="column"><span>Brand 1</span></div>
@@ -76,8 +101,8 @@ const FoBrand = () => {
                             <option value={4}>Yellow</option>
                             <option value={5}>Green </option>
                             <option value={6}>Blue  </option>
-                            <option value={-1}>Gold  </option>
-                            <option value={-2}>silver</option>
+                            <option value={7}>Gold  </option>
+                            <option value={8}>silver</option>
                         </select>
                     </div>
                 </div>
@@ -87,15 +112,14 @@ const FoBrand = () => {
                         Colors&nbsp;&nbsp;&nbsp;
                         <select value={selecB4} onChange={e => setSelecB4(e.target.value)}>
                             <option value={null}>select color</option>
-                            <option value={1}>White </option>
-                            <option value={2}>Silver </option>
-                            <option value={3}>Gold  </option>
-                            <option value={4}>Brown</option>
-                            <option value={5}>Red</option>
-                            <option value={6}>Green </option>
-                            <option value={7}>Blue </option>
-                            <option value={8}>Purple  </option>
-                            <option value={9}>Grey</option>
+                            <option value={0}>Brown  </option>
+                            <option value={1}>Red </option>
+                            <option value={2}>Green   </option>
+                            <option value={3}>Blue  </option>
+                            <option value={4}>Violet    </option>
+                            <option value={5}>Grey  </option>
+                            <option value={6}>Gold   </option>
+                            <option value={7}>Silver </option>
                         </select>
                     </div>
                 </div>
