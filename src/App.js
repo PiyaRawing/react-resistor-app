@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import FoBrand from './Components/4-Brand';
+import FvBrand from './Components/5-Brand';
+import SiBrand from './Components/6-Brand';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <h1 className='appName'>Resistor colors Code</h1>
+      <Router>
+        <div>
+          <ul className='horizontal-colorBar'>
+            <li>
+              <Link to="/">4 Brand</Link>
+            </li>
+            <li>
+              <Link to="/4-brand">5 Brand</Link>
+            </li>
+            <li>
+              <Link to="/5-brand">6 Brand</Link>
+            </li>
+          </ul>        
+          <Routes>
+            <Route path="/" exact  element={<FoBrand />}></Route>
+            <Route path="/4-brand" element={<FvBrand />}></Route>
+            <Route path="/5-brand" element={<SiBrand />}></Route>
+          </Routes>
+        </div>
+      </Router>
+      <div className='app-Ver'>
+        <div>App version 1.0.0</div>
+      </div>
+    </React.Fragment>
   );
 }
 

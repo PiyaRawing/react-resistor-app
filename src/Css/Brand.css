@@ -1,0 +1,24 @@
+.input-va {
+  width: 480px;
+  height: auto;
+  margin: 20px 48px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px #888888;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px 0px;
+  height: auto; 
+  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
